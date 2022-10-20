@@ -18,4 +18,4 @@ jobs:
   just-be:
     runs-on: ubuntu-latest
     steps:
-      - run: sleep 50s
+      - run: sleep 45s
