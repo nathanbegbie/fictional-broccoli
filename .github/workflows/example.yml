@@ -11,7 +11,7 @@ on:
       - ".github/workflows/example.yml"
 
 concurrency:
-  group: ${{ github.ref }}-${{ github.workflow }}
+  group: ${{ github.ref }}-${{ github.workflow }} ${{ github.ref_name == 'main' && github.sha || '' }}
   cancel-in-progress: true
 
 jobs:
