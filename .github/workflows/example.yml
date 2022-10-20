@@ -6,9 +6,11 @@ on:
       - main
     paths:
       - ".github/workflows/example.yml"
+      - "README.md"
   pull_request:
     paths:
       - ".github/workflows/example.yml"
+      - "README.md"
 
 concurrency:
   group: ${{ github.ref }}-${{ github.workflow }} ${{ github.ref_name == 'main' && github.sha || '' }}
